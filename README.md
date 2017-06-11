@@ -7,7 +7,7 @@ normally need to go through your entire hash table i.e. O(n) time complexity. In
 at index = value % size pointing to the entry containing that value. If there is no entry at that index, an empty one will be created.
 This entry containing the reference to the other entry containing that value is added when a key-value pair is added to the map. I say that
 a the entry casts a shadow onto another position in the table. This is a simplification of the process since you have to take into 
-account that you can have many keys associated with the same value. I have added a method for retrieving ALL the keys from a certain value at O(k) where k is the number of all the keys associated with that value. This is much better than O(n).
+account that you can have many keys associated with the same value. I have added a method for retrieving ALL the keys from a certain value at O(k) where k is the number of all the keys associated with that value. This is much better than O(n) since k << n.
 
 So why is this good? Imagine that you want to build a database of students and their grades. Normally you would use a hash map that takes
 the student ID as the key and the grade as their value. You would then be able to retrieve the value from a students ID immediately.
