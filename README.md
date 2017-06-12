@@ -10,6 +10,6 @@ a the entry casts a shadow onto another position in the table. This is a simplif
 account that you can have many keys associated with the same value. I have added a method for retrieving ALL the keys from a certain value at O(k) where k is the number of all the keys associated with that value. This is much better than O(n) since k << n.
 
 So why is this good? Imagine that you want to build a database of students and their grades. Normally you would use a hash map that takes
-the student ID as the key and the grade as their value. You would then be able to retrieve the value from a students ID immediately.
+the student ID as the key and their grade as the value. You would then be able to retrieve the value from a students ID immediately.
 However, imagine that you now want to see which students got a 5. You would now have to search through all the students in order to find
 them. With a shadow hash map you can just call getKeys(5) and it will immediately retrieve all the student that got a 5. Not only that, if you take getKeys(5).size() on that you get a histogram, i.e. the number of students who got a 5.
